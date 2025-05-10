@@ -98,11 +98,82 @@ print(id(v2))
 
 # While e Break
 
-contador = 0
+# contador = 0
 
-while contador < 18:
-    print(contador)
-    contador += 1
+# while contador < 18:
+#     print(contador)
+#     contador += 1
     
-    if contador == 17:
-        break
+#     if contador == 17:
+#         break
+
+
+# While dentro de While
+
+# qtd_linhas = 5
+# qtd_colunas = 5
+
+# linha = 1
+# while linha <= qtd_linhas:
+#     coluna = 1
+#     while coluna <= qtd_colunas:
+#         print(f"Linha: {linha}, Coluna: {coluna}")
+#         coluna += 1
+    
+#     linha += 1
+    
+    
+# print("Acabou")
+
+# name = "Murilo Dos Santos"
+# iterator_letter = 0
+# nova_string = ""
+
+# while iterator_letter <= len(name):
+    
+#     if iterator_letter >= len(name):
+#         break
+    
+#     nova_string += f"*{name[iterator_letter]}*"
+    
+#     iterator_letter += 1
+#     print(nova_string)
+    
+    
+# print("Fim")
+
+
+
+# Desafio Aula 66 - Calculadora:
+
+first_value = input("Digite o primeiro valor: ").replace(" ", "")
+second_value = input("Digite o segundo número: ").replace(" ", "")
+operator = input("Digite o operador que desejar fazer a conta: ").replace(" ", "")
+
+if first_value == "" or second_value == "" or operator == "":
+    print("Erro, você esqueceu de digitar algum campo!")
+else:
+    try:
+        first_value_int = int(first_value)
+        second_value_int = int(second_value)
+        
+        if operator == "+":
+            count = first_value_int + second_value_int
+        elif operator == "-":
+            count = first_value_int - second_value_int
+        elif operator == "*":
+            count = first_value_int * second_value_int
+        elif operator == "/":
+            count = first_value_int // second_value_int
+        else:
+            print("Operação inválida!")
+        print(f"Resultado: {first_value_int} {operator} {second_value_int} = {count}")
+        
+    except ZeroDivisionError:
+        print("Não é possível dividir por zero.")
+    except:
+        print("Erro do servidor, tente novamente!")
+
+    finally:
+        print("Fim!")
+
